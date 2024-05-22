@@ -1,4 +1,4 @@
-module github.com/flashbots/go-utils
+module github.com/thedevbirb/flashbots-go-utils
 
 go 1.20
 

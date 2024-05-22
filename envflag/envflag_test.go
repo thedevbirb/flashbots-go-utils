@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/flashbots/go-utils/envflag"
+	"github.com/thedevbirb/flashbots-go-utils/envflag"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/flashbots/go-utils/truthy"
+	"github.com/thedevbirb/flashbots-go-utils/truthy"
 	"github.com/stretchr/testify/assert"
 )
 

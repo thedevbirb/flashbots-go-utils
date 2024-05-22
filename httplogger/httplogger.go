@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/flashbots/go-utils/logutils"
+	"github.com/thedevbirb/flashbots-go-utils/logutils"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	"go.uber.org/zap"
@@ -39,6 +39,16 @@ func (rw *responseWriter) WriteHeader(code int) {
 	rw.status = code
 	rw.ResponseWriter.WriteHeader(code)
 	rw.wroteHeader = true
+}
+
+// Flush implements the http.Flusher interface. If the underlying ResponseWriter
+// implements http.Flusher, it will be called. Otherwise, this method does nothing.
+func (rw *responseWriter) Flush() {
+	if flusher, ok := rw.ResponseWriter.(http.Flusher); ok {
+		flusher.Flush()
+	} else {
+		panic("http.Flusher not implemented")
+	}
 }
 
 // LoggingMiddleware logs the incoming HTTP request & its duration.

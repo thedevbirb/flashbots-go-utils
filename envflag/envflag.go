@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/flashbots/go-utils/truthy"
+	"github.com/thedevbirb/flashbots-go-utils/truthy"
 )
 
 // Bool is a convenience wrapper for boolean flag that picks its default value

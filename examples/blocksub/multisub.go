@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/flashbots/go-utils/blocksub"
+	"github.com/thedevbirb/flashbots-go-utils/blocksub"
 )
 
 func DemoMultiSub(httpURI, wsURI string) {
